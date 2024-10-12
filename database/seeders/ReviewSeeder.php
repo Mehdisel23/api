@@ -12,6 +12,6 @@ class ReviewSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        \App\Models\Review::factory()->count(150)->create();
     }
 }

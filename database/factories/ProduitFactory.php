@@ -17,7 +17,13 @@ class ProduitFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name'=>$this -> faker ->word,
+            'detail'=>$this -> faker-> paragraph,
+            'price'=>$this -> faker -> numberBetween(100 , 1000),
+            'stock'=> $this -> faker -> randomDigitNotNull() ,
+            'discount'=> $this -> faker -> numberBetween(2 , 30),
+
+
         ];
     }
 }
